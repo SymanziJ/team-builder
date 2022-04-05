@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-
+import Members from './components/Members';
 
 
 const memberList = [
@@ -41,11 +41,7 @@ function App() {
       {
         memberList.map((member, idx) => {
           return (
-            <div key={idx}>
-              <h2>{member.name}</h2>
-              <p>{member.email}</p>
-              <p>{member.role}</p>
-            </div>
+            <Members key={idx} details={member}/>
           )
         })
       }
